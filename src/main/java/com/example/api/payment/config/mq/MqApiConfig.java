@@ -18,7 +18,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.jms.connection.CachingConnectionFactory;
 
 import javax.annotation.PostConstruct;
-import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
 import javax.jms.Queue;
 import javax.jms.QueueConnectionFactory;
@@ -89,7 +88,7 @@ public class MqApiConfig {
     }
 
     @Bean(name="mqCachingConnectionFactory")
-    public ConnectionFactory getMqCachingConnectionFactory(
+    public CachingConnectionFactory getMqCachingConnectionFactory(
             @Autowired(required = false) @Qualifier("mqConnectionFactory")
             QueueConnectionFactory targetConnectionFactory,
             @Value("${api.mq.jms.cache.size:1}") int sessionCacheSize,
@@ -115,7 +114,7 @@ public class MqApiConfig {
             QueueConnectionFactory queueConnectionFactory,
             @Autowired(required = false) @Qualifier("mqRequestQueue") Queue requestQueue,
             @Autowired(required = false) @Qualifier("mqReplyQueue") Queue replyQueue
-    ) throws JMSException {
+    ) {
 
     return TransportHandlerImpl.builder()
             .queueConnectionFactory(queueConnectionFactory)

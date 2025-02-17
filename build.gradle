@@ -55,12 +55,10 @@ dependencies {
 	//implementation "net.sf.json-lib:json-lib:2.4"
 
 	// MQ dependencies
-	runtimeOnly 'com.ibm:dhbcore:7.0.1.0'
 	//implementation 'jakarta.jms:jakarta.jms-api:3.1.0'
 	//implementation 'com.ibm.mq:com.ibm.mq.jakarta.client:9.4.1.1'
 
 	implementation 'javax.jms:javax.jms-api:2.0.1'
-	implementation 'com.ibm.mq:com.ibm.mq:5.3'
 	implementation 'com.ibm.mq:com.ibm.mq.allclient:9.2.0.20'
 
 	implementation 'org.springframework:spring-jms:5.3.20'
