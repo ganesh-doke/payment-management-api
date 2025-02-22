@@ -1,4 +1,4 @@
-package com.example.api.trade.constants;
+package com.example.api.payment.constants;
 
 public class RequestConstant {
 

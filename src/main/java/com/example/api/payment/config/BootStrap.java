@@ -1,4 +1,4 @@
-package com.example.api.trade.config;
+package com.example.api.payment.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

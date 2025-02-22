@@ -1,6 +1,5 @@
-package com.example.api.trade.error;
+package com.example.api.payment.error;
 
-import com.example.api.payment.error.ErrorCodes;
 import com.mongodb.MongoException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
