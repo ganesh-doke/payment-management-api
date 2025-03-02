@@ -4,5 +4,5 @@ public class RequestConstant {
 
     private RequestConstant() {}
 
-    public static final String TRADES = "/trades";
+    public static final String PAYMENTS = "/payments";
 }

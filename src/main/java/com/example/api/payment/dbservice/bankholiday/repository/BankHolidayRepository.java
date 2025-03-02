@@ -11,7 +11,8 @@ public class BankHolidayRepository {
 
     private static final String GET_BANK_HOLIDAY =
             "SELECT DISTINCT TO_CHAR(BANK_HOLIDAY, 'yyyy-MM-dd'))" +
-                    " FROM HOLIDAY";
+                    " FROM HOLIDAY " +
+                    "WHERE BANK_HOLI_DATE BETWEEN SYSDATE = 7 and SYSDATE + 365";
 
     private final JdbcTemplate jdbcTemplate;
 
@@ -20,7 +21,7 @@ public class BankHolidayRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public List<String> getBankHolidays() {
+    public List<String> find() {
         return jdbcTemplate.queryForList(GET_BANK_HOLIDAY, String.class);
     }
 }

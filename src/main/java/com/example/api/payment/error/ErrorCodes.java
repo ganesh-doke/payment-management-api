@@ -9,13 +9,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public enum ErrorCodes {
 
-    GENERAL_ERROR("Something's gone wrong. Techncial error."),
-    LOWER_VERSION_TRADE("Trade with higher version is already processed."),
-    EXPIRED_TRADE("Trade is expired.");
+    GENERAL_ERROR("Something's gone wrong. Technical error."),
+    LIMIT_ERROR("Limit data is missing.");
 
     private final String message;
 
     public void buildException(Exception ex) {
-        log.error("{} {}", this.name(), ex);
+        log.error("{}", this.name(), ex);
     }
 }
